@@ -7,12 +7,12 @@ const Blogs = ({blog, addReadingTime}) => {
     return (
         <div className='card py-5 m-5'>
             <div>
-                <img className='w-75' src={blog.cover_image} alt="" />
+                <img className='w-75 card' src={blog.cover_image} alt="" />
             </div>
             <div>
-            <div className='d-flex justify-content-between align-items-center px-5 '>
+            <div className='d-flex justify-content-between align-items-center w-75 py-2 '>
                     <div className='d-flex'>
-                        <img style={{width: '50px', height:'50px'}} src={blog.author_image} alt="" />
+                        <img className='card' style={{width: '50px', height:'50px'}} src={blog.author_image} alt="" />
                     
                         <div>
                             <h2>{blog.author_name}</h2>
@@ -29,7 +29,7 @@ const Blogs = ({blog, addReadingTime}) => {
                 
             </div>
            <div className=''>
-                <h1>{blog.blog_title}</h1>
+                <h1 onClick={modalData}>{blog.blog_title}</h1>
                 <p>#beginners #programming</p>
                 <button style={{color:'rebeccapurple', border:'none'}} onClick={()=>addReadingTime(blog.read_time)}>Mark as read</button>
             </div>

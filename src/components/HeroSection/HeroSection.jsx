@@ -13,7 +13,7 @@ const HeroSection = ({addReadingTime}) => {
     return (
         <div className='main row'>
            
-      <h1 style={{color: 'rebeccapurple', padding: '3rem'}}>Remote Job's Blog</h1>
+      <h1 style={{color: 'rebeccapurple', padding: '3rem'}}>Exploring React</h1>
       
            {
             blogs.map(blog => <Blogs blog={blog} key={blog.id} addReadingTime={addReadingTime}></Blogs>)
